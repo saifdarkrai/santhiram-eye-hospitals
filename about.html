@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Santhiram Laser Eye Hospitals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-title { font-family: 'Playfair Display', serif; }
+        .medical-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #0891b2 100%); }
+        .doctor-card { transition: all 0.3s ease; }
+        .doctor-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15); }
+        .achievement-item { transition: all 0.3s ease; }
+        .achievement-item:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-white text-gray-700">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="resources/hospital_logo.png" alt="Santhiram Logo" class="h-10 w-10">
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-900">Santhiram</h1>
+                        <p class="text-xs text-teal-600">Laser Eye Hospitals</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-900 transition-colors">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-blue-900 transition-colors">Services</a>
+                    <a href="about.html" class="text-blue-900 font-medium border-b-2 border-teal-500">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-blue-900 transition-colors">Contact</a>
+                </div>
+                <button onclick="window.location.href='contact.html'" class="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 medical-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="hero-title text-5xl font-bold mb-6">About Santhiram</h1>
+            <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+                Leading eye care institution with 15 years of excellence, advanced technology, 
+                and a team of experienced ophthalmologists dedicated to restoring vision.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hospital Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="hero-title text-4xl font-bold text-blue-900 mb-6">Our Mission & Vision</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Founded in 2010, Santhiram Laser Eye Hospitals has been at the forefront of ophthalmic care, 
+                        combining cutting-edge technology with compassionate patient care. Our mission is to provide 
+                        world-class eye care services accessible to everyone.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-blue-900 mb-1">Advanced Technology</h3>
+                                <p class="text-gray-600">State-of-the-art equipment and latest surgical techniques</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-blue-900 mb-1">Expert Team</h3>
+                                <p class="text-gray-600">Highly qualified and experienced ophthalmologists</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-blue-900 mb-1">Patient-Centered Care</h3>
+                                <p class="text-gray-600">Personalized treatment plans and comprehensive support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="resources/hero_surgery_room.png" alt="Hospital Facility" class="rounded-2xl shadow-2xl w-full">
+                    <div class="absolute -bottom-6 -right-6 bg-teal-600 text-white p-6 rounded-2xl">
+                        <div class="text-3xl font-bold">15+</div>
+                        <div class="text-sm">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Profiles -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-4xl font-bold text-blue-900 mb-4">Our Expert Team</h2>
+                <p class="text-xl text-gray-600">Meet our highly qualified and experienced ophthalmologists</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="filterDoctors('all')" class="doctor-filter active bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    All Doctors
+                </button>
+                <button onclick="filterDoctors('lasik')" class="doctor-filter bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-100 transition-colors">
+                    LASIK Specialists
+                </button>
+                <button onclick="filterDoctors('cataract')" class="doctor-filter bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-100 transition-colors">
+                    Cataract Surgeons
+                </button>
+                <button onclick="filterDoctors('retina')" class="doctor-filter bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-100 transition-colors">
+                    Retina Specialists
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dr. Santhiram -->
+                <div class="doctor-card bg-white rounded-2xl p-8 shadow-lg" data-specialty="lasik">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">👨‍⚕️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 text-center mb-2">Dr. Santhiram Reddy</h3>
+                    <p class="text-teal-600 text-center font-semibold mb-4">Chief Ophthalmologist & Founder</p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Experience:</span>
+                            <span class="font-semibold">20+ Years</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Specialization:</span>
+                            <span class="font-semibold">LASIK, Cataract</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Surgeries:</span>
+                            <span class="font-semibold">15,000+</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400 mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600">4.9/5 (500+ reviews)</span>
+                        </div>
+                    </div>
+                    <button onclick="bookWithDoctor('santhiram')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Dr. Priya Sharma -->
+                <div class="doctor-card bg-white rounded-2xl p-8 shadow-lg" data-specialty="cataract">
+                    <div class="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">👩‍⚕️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 text-center mb-2">Dr. Priya Sharma</h3>
+                    <p class="text-teal-600 text-center font-semibold mb-4">Senior Cataract Surgeon</p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Experience:</span>
+                            <span class="font-semibold">15+ Years</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Specialization:</span>
+                            <span class="font-semibold">Cataract, IOL</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Surgeries:</span>
+                            <span class="font-semibold">8,000+</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400 mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600">4.8/5 (300+ reviews)</span>
+                        </div>
+                    </div>
+                    <button onclick="bookWithDoctor('priya')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Dr. Arjun Patel -->
+                <div class="doctor-card bg-white rounded-2xl p-8 shadow-lg" data-specialty="retina">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">👨‍⚕️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 text-center mb-2">Dr. Arjun Patel</h3>
+                    <p class="text-teal-600 text-center font-semibold mb-4">Retina Specialist</p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Experience:</span>
+                            <span class="font-semibold">12+ Years</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Specialization:</span>
+                            <span class="font-semibold">Retina, Vitreous</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Surgeries:</span>
+                            <span class="font-semibold">5,000+</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400 mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600">4.7/5 (250+ reviews)</span>
+                        </div>
+                    </div>
+                    <button onclick="bookWithDoctor('arjun')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Dr. Meera Singh -->
+                <div class="doctor-card bg-white rounded-2xl p-8 shadow-lg" data-specialty="lasik">
+                    <div class="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">👩‍⚕️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 text-center mb-2">Dr. Meera Singh</h3>
+                    <p class="text-teal-600 text-center font-semibold mb-4">LASIK Specialist</p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Experience:</span>
+                            <span class="font-semibold">10+ Years</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Specialization:</span>
+                            <span class="font-semibold">LASIK, PRK</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Surgeries:</span>
+                            <span class="font-semibold">6,000+</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400 mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600">4.8/5 (200+ reviews)</span>
+                        </div>
+                    </div>
+                    <button onclick="bookWithDoctor('meera')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Dr. Rajesh Gupta -->
+                <div class="doctor-card bg-white rounded-2xl p-8 shadow-lg" data-specialty="cataract">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">👨‍⚕️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 text-center mb-2">Dr. Rajesh Gupta</h3>
+                    <p class="text-teal-600 text-center font-semibold mb-4">Pediatric Ophthalmologist</p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Experience:</span>
+                            <span class="font-semibold">18+ Years</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Specialization:</span>
+                            <span class="font-semibold">Pediatric, Cataract</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Surgeries:</span>
+                            <span class="font-semibold">7,500+</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400 mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600">4.9/5 (350+ reviews)</span>
+                        </div>
+                    </div>
+                    <button onclick="bookWithDoctor('rajesh')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Dr. Anita Desai -->
+                <div class="doctor-card bg-white rounded-2xl p-8 shadow-lg" data-specialty="retina">
+                    <div class="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl">👩‍⚕️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 text-center mb-2">Dr. Anita Desai</h3>
+                    <p class="text-teal-600 text-center font-semibold mb-4">Glaucoma Specialist</p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Experience:</span>
+                            <span class="font-semibold">14+ Years</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Specialization:</span>
+                            <span class="font-semibold">Glaucoma, Laser</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Surgeries:</span>
+                            <span class="font-semibold">4,000+</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400 mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600">4.7/5 (180+ reviews)</span>
+                        </div>
+                    </div>
+                    <button onclick="bookWithDoctor('anita')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Book Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-4xl font-bold text-blue-900 mb-4">Our Achievements</h2>
+                <p class="text-xl text-gray-600">Recognitions and certifications that reflect our commitment to excellence</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="achievement-item text-center p-6 bg-gray-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏆</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Best Eye Hospital</h3>
+                    <p class="text-gray-600 mb-2">Healthcare Excellence Award 2023</p>
+                    <p class="text-sm text-teal-600">Recognized for outstanding patient care and surgical outcomes</p>
+                </div>
+                <div class="achievement-item text-center p-6 bg-gray-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📜</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">NABH Accredited</h3>
+                    <p class="text-gray-600 mb-2">National Accreditation</p>
+                    <p class="text-sm text-teal-600">Highest standards of quality and patient safety</p>
+                </div>
+                <div class="achievement-item text-center p-6 bg-gray-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🔬</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Research Center</h3>
+                    <p class="text-gray-600 mb-2">Clinical Research Approved</p>
+                    <p class="text-sm text-teal-600">Contributing to advancement in eye care technology</p>
+                </div>
+                <div class="achievement-item text-center p-6 bg-gray-50 rounded-2xl">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🌟</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">Patient Choice</h3>
+                    <p class="text-gray-600 mb-2">Most Trusted Hospital</p>
+                    <p class="text-sm text-teal-600">98% patient satisfaction rate with our services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology & Equipment -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-4xl font-bold text-blue-900 mb-4">Advanced Technology</h2>
+                <p class="text-xl text-gray-600">State-of-the-art equipment for precise diagnosis and treatment</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🔬</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Femtosecond Laser</h3>
+                    <p class="text-gray-600 mb-4">Advanced laser technology for bladeless LASIK procedures with unmatched precision.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 100% bladeless procedures</li>
+                        <li>• Enhanced safety and accuracy</li>
+                        <li>• Faster recovery times</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">📷</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">OCT Imaging</h3>
+                    <p class="text-gray-600 mb-4">Optical Coherence Tomography for detailed retinal analysis and diagnosis.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• High-resolution imaging</li>
+                        <li>• Early disease detection</li>
+                        <li>• Treatment monitoring</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Excimer Laser</h3>
+                    <p class="text-gray-600 mb-4">Precision laser for corneal reshaping in vision correction procedures.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Wavefront-optimized</li>
+                        <li>• Custom treatment profiles</li>
+                        <li>• Superior visual outcomes</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🔍</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Operating Microscope</h3>
+                    <p class="text-gray-600 mb-4">High-magnification microscopes for precise surgical visualization.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Superior depth perception</li>
+                        <li>• Enhanced surgical precision</li>
+                        <li>• Better patient outcomes</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">💡</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">YAG Laser</h3>
+                    <p class="text-gray-600 mb-4">Specialized laser for posterior capsulotomy and iridotomy procedures.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Non-invasive treatment</li>
+                        <li>• Quick procedure time</li>
+                        <li>• Minimal discomfort</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Visual Field Analyzer</h3>
+                    <p class="text-gray-600 mb-4">Advanced diagnostic tool for glaucoma and neurological condition assessment.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Comprehensive field testing</li>
+                        <li>• Early glaucoma detection</li>
+                        <li>• Progress monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="resources/hospital_logo.png" alt="Santhiram Logo" class="h-10 w-10">
+                        <div>
+                            <h3 class="text-xl font-bold">Santhiram</h3>
+                            <p class="text-sm text-blue-200">Laser Eye Hospitals</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-200">Advanced vision care with cutting-edge technology and experienced ophthalmologists.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li>LASIK Surgery</li>
+                        <li>Cataract Surgery</li>
+                        <li>Glaucoma Treatment</li>
+                        <li>Retina Care</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Emergency Contact</h4>
+                    <p class="text-blue-200 mb-2">📞 +91 8989464646</p>
+                    <p class="text-blue-200">🏥 24/7 Emergency Services</p>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 Santhiram Laser Eye Hospitals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // About page specific functions
+        function filterDoctors(specialty) {
+            const cards = document.querySelectorAll('.doctor-card');
+            const buttons = document.querySelectorAll('.doctor-filter');
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-teal-600', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            event.target.classList.add('active', 'bg-teal-600', 'text-white');
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+            
+            // Filter cards
+            cards.forEach(card => {
+                const cardSpecialty = card.dataset.specialty;
+                if (specialty === 'all' || cardSpecialty === specialty) {
+                    card.style.display = 'block';
+                    anime({
+                        targets: card,
+                        opacity: [0, 1],
+                        translateY: [20, 0],
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                } else {
+                    anime({
+                        targets: card,
+                        opacity: [1, 0],
+                        translateY: [0, -20],
+                        duration: 300,
+                        easing: 'easeOutQuad',
+                        complete: () => {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        }
+
+        function bookWithDoctor(doctorId) {
+            localStorage.setItem('selectedDoctor', doctorId);
+            window.location.href = 'contact.html';
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate doctor cards
+            anime({
+                targets: '.doctor-card',
+                translateY: [30, 0],
+                opacity: [0, 1],
+                duration: 800,
+                delay: anime.stagger(100, {start: 300}),
+                easing: 'easeOutExpo'
+            });
+
+            // Animate achievement items
+            anime({
+                targets: '.achievement-item',
+                scale: [0.8, 1],
+                opacity: [0, 1],
+                duration: 600,
+                delay: anime.stagger(100, {start: 500}),
+                easing: 'easeOutExpo'
+            });
+        });
+    </script>
+</body>
+</html>

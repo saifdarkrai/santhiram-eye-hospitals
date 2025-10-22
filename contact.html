@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Appointments - Santhiram Laser Eye Hospitals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-title { font-family: 'Playfair Display', serif; }
+        .medical-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #0891b2 100%); }
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+        .step-indicator { transition: all 0.3s ease; }
+        .step-indicator.active { background: #0891b2; color: white; }
+        .step-indicator.completed { background: #10b981; color: white; }
+        .location-card { transition: all 0.3s ease; }
+        .location-card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1); }
+    </style>
+</head>
+<body class="bg-white text-gray-700">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="resources/hospital_logo.png" alt="Santhiram Logo" class="h-10 w-10">
+                    <div>
+                        <h1 class="text-xl font-bold text-blue-900">Santhiram</h1>
+                        <p class="text-xs text-teal-600">Laser Eye Hospitals</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-900 transition-colors">Home</a>
+                    <a href="services.html" class="text-gray-600 hover:text-blue-900 transition-colors">Services</a>
+                    <a href="about.html" class="text-gray-600 hover:text-blue-900 transition-colors">About</a>
+                    <a href="contact.html" class="text-blue-900 font-medium border-b-2 border-teal-500">Contact</a>
+                </div>
+                <button onclick="scrollToBooking()" class="bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 medical-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="hero-title text-5xl font-bold mb-6">Contact & Appointments</h1>
+            <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+                Schedule your consultation with our expert ophthalmologists. We're here to help restore your vision.
+            </p>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📞</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">Emergency Line</h3>
+                    <p class="text-gray-600 mb-2">+91 8989464646</p>
+                    <p class="text-sm text-teal-600">24/7 Emergency Services</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📧</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">Email Us</h3>
+                    <p class="text-gray-600 mb-2">info@santhiram.com</p>
+                    <p class="text-sm text-teal-600">Response within 24 hours</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏥</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">Visit Us</h3>
+                    <p class="text-gray-600 mb-2">Mon-Sat: 8AM-8PM</p>
+                    <p class="text-sm text-teal-600">Sunday: 10AM-2PM</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">💬</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-900 mb-2">Live Chat</h3>
+                    <p class="text-gray-600 mb-2">Instant Support</p>
+                    <p class="text-sm text-teal-600">Available during working hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="bookingSection" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="hero-title text-4xl font-bold text-blue-900 mb-4">Book Your Appointment</h2>
+                <p class="text-xl text-gray-600">Complete the form below to schedule your consultation</p>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="flex justify-center mb-12">
+                <div class="flex items-center space-x-4">
+                    <div class="step-indicator active w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold">1</div>
+                    <div class="w-16 h-1 bg-gray-200"></div>
+                    <div class="step-indicator w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold">2</div>
+                    <div class="w-16 h-1 bg-gray-200"></div>
+                    <div class="step-indicator w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold">3</div>
+                    <div class="w-16 h-1 bg-gray-200"></div>
+                    <div class="step-indicator w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold">4</div>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <form id="appointmentForm" onsubmit="submitAppointment(event)">
+                    <!-- Step 1: Service Selection -->
+                    <div class="form-step active" id="step1">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Select Your Service</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-teal-500 transition-colors" onclick="selectService('lasik')">
+                                <div class="flex items-center">
+                                    <input type="radio" name="service" value="lasik" class="mr-3">
+                                    <div>
+                                        <h4 class="font-bold text-blue-900">LASIK Surgery</h4>
+                                        <p class="text-sm text-gray-600">Laser vision correction</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-teal-500 transition-colors" onclick="selectService('cataract')">
+                                <div class="flex items-center">
+                                    <input type="radio" name="service" value="cataract" class="mr-3">
+                                    <div>
+                                        <h4 class="font-bold text-blue-900">Cataract Surgery</h4>
+                                        <p class="text-sm text-gray-600">Premium IOL implantation</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-teal-500 transition-colors" onclick="selectService('glaucoma')">
+                                <div class="flex items-center">
+                                    <input type="radio" name="service" value="glaucoma" class="mr-3">
+                                    <div>
+                                        <h4 class="font-bold text-blue-900">Glaucoma Treatment</h4>
+                                        <p class="text-sm text-gray-600">Laser & surgical options</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-teal-500 transition-colors" onclick="selectService('retina')">
+                                <div class="flex items-center">
+                                    <input type="radio" name="service" value="retina" class="mr-3">
+                                    <div>
+                                        <h4 class="font-bold text-blue-900">Retina Care</h4>
+                                        <p class="text-sm text-gray-600">Advanced retinal treatments</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-8">
+                            <button type="button" onclick="nextStep()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Doctor Selection -->
+                    <div class="form-step" id="step2">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Choose Your Doctor</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="doctorOptions">
+                            <!-- Doctors will be populated based on service selection -->
+                        </div>
+                        <div class="flex justify-between mt-8">
+                            <button type="button" onclick="prevStep()" class="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                                Back
+                            </button>
+                            <button type="button" onclick="nextStep()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Date & Time -->
+                    <div class="form-step" id="step3">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Select Date & Time</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+                                <input type="date" id="appointmentDate" name="date" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Available Time Slots</label>
+                                <div class="grid grid-cols-2 gap-2" id="timeSlots">
+                                    <!-- Time slots will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-8">
+                            <button type="button" onclick="prevStep()" class="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                                Back
+                            </button>
+                            <button type="button" onclick="nextStep()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Personal Information -->
+                    <div class="form-step" id="step4">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Personal Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Age *</label>
+                                <input type="number" name="age" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                                <input type="tel" name="phone" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                                <textarea name="address" rows="3" class="w-full p-3 border border-gray-300 rounded-lg"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Insurance Provider</label>
+                                <select name="insurance" class="w-full p-3 border border-gray-300 rounded-lg">
+                                    <option value="">Select Insurance</option>
+                                    <option value="none">No Insurance</option>
+                                    <option value="star">Star Health</option>
+                                    <option value="icici">ICICI Lombard</option>
+                                    <option value="max">Max Bupa</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Previous Eye Surgery</label>
+                                <select name="previous_surgery" class="w-full p-3 border border-gray-300 rounded-lg">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Additional Notes</label>
+                            <textarea name="notes" rows="3" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Any specific concerns or questions..."></textarea>
+                        </div>
+                        <div class="flex justify-between mt-8">
+                            <button type="button" onclick="prevStep()" class="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                                Back
+                            </button>
+                            <button type="submit" id="submitBtn" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Locations -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-4xl font-bold text-blue-900 mb-4">Our Locations</h2>
+                <p class="text-xl text-gray-600">Visit us at any of our convenient locations</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="location-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🏥</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Main Hospital</h3>
+                    <div class="space-y-2 text-gray-600 mb-6">
+                        <p>📍 123 Medical Center Road</p>
+                        <p>🏙️ Kurnool, Andhra Pradesh 518001</p>
+                        <p>📞 +91-8518-123456</p>
+                        <p>🕒 Mon-Sat: 8AM-8PM</p>
+                    </div>
+                    <button onclick="getDirections('main')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Get Directions
+                    </button>
+                </div>
+                <div class="location-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🏢</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">City Center Clinic</h3>
+                    <div class="space-y-2 text-gray-600 mb-6">
+                        <p>📍 456 Downtown Plaza</p>
+                        <p>🏙️ Kurnool, Andhra Pradesh 518002</p>
+                        <p>📞 +91-8518-234567</p>
+                        <p>🕒 Mon-Sat: 9AM-7PM</p>
+                    </div>
+                    <button onclick="getDirections('city')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Get Directions
+                    </button>
+                </div>
+                <div class="location-card bg-gray-50 p-8 rounded-2xl">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🏥</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">East Branch</h3>
+                    <div class="space-y-2 text-gray-600 mb-6">
+                        <p>📍 789 East End Street</p>
+                        <p>🏙️ Kurnool, Andhra Pradesh 518003</p>
+                        <p>📞 +91-8518-345678</p>
+                        <p>🕒 Mon-Sat: 8AM-6PM</p>
+                    </div>
+                    <button onclick="getDirections('east')" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Get Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="resources/hospital_logo.png" alt="Santhiram Logo" class="h-10 w-10">
+                        <div>
+                            <h3 class="text-xl font-bold">Santhiram</h3>
+                            <p class="text-sm text-blue-200">Laser Eye Hospitals</p>
+                        </div>
+                    </div>
+                    <p class="text-blue-200">Advanced vision care with cutting-edge technology and experienced ophthalmologists.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-blue-200">
+                        <li>LASIK Surgery</li>
+                        <li>Cataract Surgery</li>
+                        <li>Glaucoma Treatment</li>
+                        <li>Retina Care</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Emergency Contact</h4>
+                    <p class="text-blue-200 mb-2">📞 +91 8989464646</p>
+                    <p class="text-blue-200">🏥 24/7 Emergency Services</p>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
+                <p>&copy; 2025 Santhiram Laser Eye Hospitals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Contact page specific variables
+        let currentStep = 1;
+        let selectedService = '';
+        let selectedDoctor = '';
+
+        // Doctor data
+        const doctors = {
+            lasik: [
+                { id: 'santhiram', name: 'Dr. Santhiram Reddy', experience: '20+ Years' },
+                { id: 'meera', name: 'Dr. Meera Singh', experience: '10+ Years' }
+            ],
+            cataract: [
+                { id: 'priya', name: 'Dr. Priya Sharma', experience: '15+ Years' },
+                { id: 'rajesh', name: 'Dr. Rajesh Gupta', experience: '18+ Years' }
+            ],
+            glaucoma: [
+                { id: 'anita', name: 'Dr. Anita Desai', experience: '14+ Years' }
+            ],
+            retina: [
+                { id: 'arjun', name: 'Dr. Arjun Patel', experience: '12+ Years' }
+            ]
+        };
+
+        // Time slots
+        const timeSlots = [
+            '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
+            '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM'
+        ];
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for pre-selected service or doctor
+            const preSelectedService = localStorage.getItem('selectedService');
+            const preSelectedDoctor = localStorage.getItem('selectedDoctor');
+            
+            if (preSelectedService) {
+                selectedService = preSelectedService;
+                document.querySelector(`input[name="service"][value="${preSelectedService}"]`).checked = true;
+                updateDoctorOptions();
+            }
+            
+            if (preSelectedDoctor) {
+                selectedDoctor = preSelectedDoctor;
+            }
+
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('appointmentDate').min = today;
+            
+            // Add event listener for date change
+            document.getElementById('appointmentDate').addEventListener('change', updateTimeSlots);
+        });
+
+        // Service selection
+        function selectService(service) {
+            selectedService = service;
+            document.querySelector(`input[name="service"][value="${service}"]`).checked = true;
+            updateDoctorOptions();
+        }
+
+        // Update doctor options based on service
+        function updateDoctorOptions() {
+            const container = document.getElementById('doctorOptions');
+            const serviceDoctors = doctors[selectedService] || [];
+            
+            container.innerHTML = serviceDoctors.map(doctor => `
+                <div class="doctor-option border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-teal-500 transition-colors" onclick="selectDoctor('${doctor.id}')">
+                    <div class="flex items-center">
+                        <input type="radio" name="doctor" value="${doctor.id}" class="mr-3">
+                        <div>
+                            <h4 class="font-bold text-blue-900">${doctor.name}</h4>
+                            <p class="text-sm text-gray-600">${doctor.experience} experience</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Doctor selection
+        function selectDoctor(doctorId) {
+            selectedDoctor = doctorId;
+            document.querySelector(`input[name="doctor"][value="${doctorId}"]`).checked = true;
+        }
+
+        // Step navigation
+        function nextStep() {
+            if (validateCurrentStep()) {
+                currentStep++;
+                showStep(currentStep);
+                updateStepIndicator();
+            }
+        }
+
+        function prevStep() {
+            currentStep--;
+            showStep(currentStep);
+            updateStepIndicator();
+        }
+
+        function showStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.form-step').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Show current step
+            document.getElementById(`step${step}`).classList.add('active');
+            
+            // Initialize step-specific content
+            if (step === 3) {
+                updateTimeSlots();
+            }
+        }
+
+        function updateStepIndicator() {
+            document.querySelectorAll('.step-indicator').forEach((indicator, index) => {
+                const stepNumber = index + 1;
+                indicator.classList.remove('active', 'completed');
+                
+                if (stepNumber < currentStep) {
+                    indicator.classList.add('completed');
+                } else if (stepNumber === currentStep) {
+                    indicator.classList.add('active');
+                }
+            });
+        }
+
+        // Validate current step
+        function validateCurrentStep() {
+            switch (currentStep) {
+                case 1:
+                    if (!selectedService) {
+                        alert('Please select a service');
+                        return false;
+                    }
+                    break;
+                case 2:
+                    if (!selectedDoctor) {
+                        alert('Please select a doctor');
+                        return false;
+                    }
+                    break;
+                case 3:
+                    const date = document.querySelector('input[name="date"]').value;
+                    const time = document.querySelector('input[name="time"]:checked');
+                    if (!date || !time) {
+                        alert('Please select date and time');
+                        return false;
+                    }
+                    break;
+            }
+            return true;
+        }
+
+        // Update time slots
+        function updateTimeSlots() {
+            const selectedDate = document.getElementById('appointmentDate').value;
+            const container = document.getElementById('timeSlots');
+            
+            if (!selectedDate) {
+                container.innerHTML = '<p class="text-gray-500">Please select a date first</p>';
+                return;
+            }
+            
+            container.innerHTML = timeSlots.map(time => `
+                <label class="time-slot border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-teal-500 transition-colors">
+                    <input type="radio" name="time" value="${time}" class="mr-2">
+                    <span class="text-sm">${time}</span>
+                </label>
+            `).join('');
+        }
+
+        // Scroll to booking section
+        function scrollToBooking() {
+            document.getElementById('bookingSection').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Get directions
+        function getDirections(location) {
+            const addresses = {
+                main: '123 Medical Center Road, Kurnool, Andhra Pradesh 518001',
+                city: '456 Downtown Plaza, Kurnool, Andhra Pradesh 518002',
+                east: '789 East End Street, Kurnool, Andhra Pradesh 518003'
+            };
+            
+            const address = addresses[location];
+            const url = `https://maps.google.com/?q=${encodeURIComponent(address)}`;
+            window.open(url, '_blank');
+        }
+
+        // Override the submit appointment function
+        function submitAppointment(event) {
+            event.preventDefault();
+            
+            if (!validateCurrentStep()) {
+                return;
+            }
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Booking...';
+            submitBtn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                showBookingConfirmation();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        }
+
+        // Show booking confirmation
+        function showBookingConfirmation() {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4';
+            
+            const formData = new FormData(document.getElementById('appointmentForm'));
+            const selectedDoctorName = doctors[selectedService]?.find(d => d.id === selectedDoctor)?.name || 'Dr. TBD';
+            
+            modal.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">✓</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Appointment Confirmed!</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6 text-left">
+                        <h4 class="font-bold text-blue-900 mb-2">Appointment Details:</h4>
+                        <p><strong>Service:</strong> ${selectedService.charAt(0).toUpperCase() + selectedService.slice(1)} Surgery</p>
+                        <p><strong>Doctor:</strong> ${selectedDoctorName}</p>
+                        <p><strong>Date:</strong> ${formData.get('date')}</p>
+                        <p><strong>Time:</strong> ${formData.get('time')}</p>
+                        <p><strong>Patient:</strong> ${formData.get('name')}</p>
+                    </div>
+                    <p class="text-gray-600 mb-6">You will receive a confirmation SMS and email shortly. Please arrive 30 minutes before your appointment time.</p>
+                    <button onclick="this.parentElement.parentElement.remove(); resetForm();" class="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                        Close
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Reset form
+        function resetForm() {
+            currentStep = 1;
+            selectedService = '';
+            selectedDoctor = '';
+            document.getElementById('appointmentForm').reset();
+            showStep(1);
+            updateStepIndicator();
+        }
+    </script>
+</body>
+<ctedService = '';
+            selectedDoctor = '';
+            document.getElementById('appointmentForm').reset();
+            showStep(1);
+            updateStepIndicator();
+        }
+    </script>
+</body>
+<
